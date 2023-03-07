@@ -9,7 +9,7 @@ int main(int argc, char const *argv[])
     printf("The Value of A is = %d\n" , a);
     printf("The value with ptra of a is = %d\n" , *ptra);
     printf("The value with ptra of a is = %x\n" , *ptra); //using Hexadecimal format specifire
-    printf("The value with ptra of a is = %p\n" , *ptra); //using Pointer format specifire
+    printf("The value with ptra of a is = %c\n" , *ptra); //using Pointer format specifire
     printf("The Address of ptra is = %p\n" , &ptra); //address of ptra
     printf("The Address of a is = %p\n" , &a); //address of a
     printf("The Address of a with ptra is = %p\n" , ptra); 

@@ -8,9 +8,9 @@
 
 int fib_rec(int n)
 {
-    if (n == 0 ||n == 1 || n == 2)
+    if (n == 1 || n == 2)
     {
-        return n;
+        return n-1;
     }
     else
     {
@@ -18,14 +18,32 @@ int fib_rec(int n)
     }
 }
 
+int fib_ittr(int n)
+{
+    int a=0,b=1;
+    for (int i = 0; i < n-1; i++)
+    {
+        b=a+b;
+        a=b-a;
+    }
+    return a; 
+}
+
 int main()
 {
     int number;
     for (int i = 0; i < 10; i++)
     {
-        printf("Enter THe Fibbonic Number order of  = ");
+        printf("Enter the Index no. for Fibonacci series = ");
         scanf("%d", &number);
-        printf("fibbonic Number is %d\n", fib_rec(number));
+        if (number == 0)
+        {
+            printf("Index starts from 1\n\n");
+            continue;
+        }
+        
+        printf("The Value of fabonacci number at position %d using Itterative approch is %d\n",number, fib_ittr(number));
+        printf("The Value of fabonacci number at position %d using Resursive approch is %d\n",number, fib_rec(number));
     }
 
     return 0;
