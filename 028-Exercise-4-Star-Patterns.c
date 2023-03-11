@@ -1,28 +1,27 @@
 #include <stdio.h>
 
-void star_pattern(){
-    printf("*****\n****\n***\n**\n*");
+int printstar(int rows){
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    
+    return 0;
 }
 
-void reverse_star_pattern(){
-    printf("*\n**\n***\n****\n*****");
-}
 
 int main()
 {
-    int num;
-    printf("Enter Which type of STAR pattern do you want\n for , \nStar_pattern  0\nReversed_Star_pattern  1\n your option ==");
-    scanf("%d" , &num);
-    if (num == 0)
+    int rows;
+    for (int i = 0; i < 10; i++)
     {
-        star_pattern();
-    }
-    else if (num == 1)
-    {
-        reverse_star_pattern();
-    }
-    else{
-        printf("Invalid Input");
+    printf("How MAny rows you Want = ");
+    scanf("%d" , &rows);
+    printstar(rows);
     }
     return 0;
 }
