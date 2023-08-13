@@ -13,5 +13,5 @@ int main (){
 
     printf("%.2f\n\n", fof(n));
 
-    return (0);
+    return (0);        
 }
